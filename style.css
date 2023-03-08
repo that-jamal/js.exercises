@@ -1,0 +1,22 @@
+html {
+    background: url("https://m.media-amazon.com/images/I/710MU6UU2+L._SL1200_.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div {
+    margin: auto;
+    width: 15%;
+    border: 10px solid rgb(0, 0, 0);
+    color: rgb(240, 250, 255);
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(109, 177, 255);
+    font-family: fantasy;
+}
+
+div :hover {
+    box-shadow: 0 0 21px white;
+}
