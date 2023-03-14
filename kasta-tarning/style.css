@@ -1,3 +1,11 @@
+body {
+    background: url("https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2Fc-jxKd_cAZl1gHaZS-VR6A%252FJan_van_Eyck_Diptych_Crucifixion_Right_Detail_1.jpg&width=910") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #box1 {
     margin: auto;
     width: 35%;
@@ -43,6 +51,8 @@ button {
 }
 
 
-button :hover {
+button:active {
     box-shadow: 0 0 21px rgb(0, 0, 0);
+    background-color: brown;
+    color: white;
 }
