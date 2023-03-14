@@ -2,6 +2,13 @@ let box = document.getElementById("box1")
 let button = document.querySelector("button");
 let number
 
+button.addEventListener("click", function (e) {
+    e.preventDefault;
+    box.classList.remove("run-animation");
+    void box.offsetWidth;
+    box.classList.add("run-animation");
+}, false);
+
 button.addEventListener("click", function () {
     number = Math.floor(Math.random() * 6);
     role()
