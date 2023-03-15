@@ -11,7 +11,7 @@ function nu() {
 
 }
 
-var intervalId = window.setInterval(function () {
+let intervalId = window.setInterval(function () {
     // call your function here
     nu()
 }, 1000);
