@@ -15,7 +15,7 @@ button.addEventListener("click", function () {
 })
 
 
-pictures = [{
+const pictures = [{
     num: 1,
     dice: "https://cdn.discordapp.com/attachments/691020853248262184/1084737400359616522/1_dice.png"
 },
