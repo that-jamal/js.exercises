@@ -1,0 +1,28 @@
+#fr-om {
+    background-color: rgb(84, 93, 117);
+    width: 84vh;
+    height: 90vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+button {
+    font-size: 40px;
+}
+
+.user {
+    border-radius: 25px;
+    margin: auto;
+    background-color: rgb(151, 160, 211);
+}
+
+.email {
+    text-align: center;
+    width: 22vh;
+    border-radius: 25px;
+    margin: auto;
+    background-color: rgb(199, 207, 230);
+}
