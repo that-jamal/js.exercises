@@ -23,6 +23,16 @@ button {
     transition: box-shadow 0.2s ease-in-out;
 }
 
+span {
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    font-size: 40px;
+    box-shadow: 0 3px #999;
+    text-align: center;
+    padding-top: 10%;
+}
+
 .plus {
     border-radius: 50% 0 0 50%;
 }
@@ -32,8 +42,9 @@ button {
 }
 
 .counter {
-    margin: 0 30px;
+    margin: 0 4px;
     font-size: 50px;
+    border-radius: 10% 10% 10% 10%;
 }
 
 button:hover {
