@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: azure;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: #eee;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.plus {
+    border-radius: 50% 0 0 50%;
+}
+
+.minus {
+    border-radius: 0 50% 50% 0;
+}
+
+.counter {
+    margin: 0 30px;
+    font-size: 50px;
+}
+
+button:hover {
+    box-shadow: 0 5px #666;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(3px);
+}

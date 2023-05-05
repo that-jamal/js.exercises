@@ -1,3 +1,4 @@
+/*
 let input = document.querySelector("input");
 let answer = document.getElementById("answer")
 let objectDate = new Date();
@@ -23,7 +24,7 @@ boxb.addEventListener("keypress", function (event) {
     nowM = m - month.value
     nowY = y - year.value
     if (0 > nowD) {
-        nowD = nowD + daysInMonth(3)
+        nowD = nowD + daysInMonth(nowM)
         nowM--
         if (0 > nowM) {
             nowM = nowM + 12
@@ -43,7 +44,44 @@ boxb.addEventListener("keypress", function (event) {
     if (2023 < year.value) {
         year.value = 2023
     }
-
+    console.log(nowM)
 
     answer.innerText = ("age = " + nowD + "D" + "/" + nowM + "M" + "/" + nowY + "Y")
 })
+console.log(month)
+*/
+const inputElement = document.querySelector('input');
+const divElement = document.querySelector('div');
+
+inputElement.addEventListener('change', () => {
+    const result = computeAge(inputElement.value);
+    divElement.innerHTML = `
+    Du är ${result.years} år och ${result.days} dagar gammal
+  `;
+});
+
+/**
+ * @param {string} dateOfBirth 
+ * @returns {{years: number, days: number}}
+ */
+function computeAge(dateOfBirth) {
+    const now = new Date();
+    const birtdate = new Date(dateOfBirth);
+
+    if ((now.getMonth() > birtdate.getMonth()) || (now.getMonth() === birtdate.getMonth() && now.getDate() >= birtdate.getDate())) {
+        const thisYearBirtDate = new Date(`${now.getFullYear()}-${birtdate.getMonth() + 1}-${birtdate.getDate()}`);
+
+        return {
+            years: now.getFullYear() - birtdate.getFullYear(),
+            days: Math.floor((now.getTime() - thisYearBirtDate.getTime()) / (1000 * 60 * 60 * 24))
+        };
+    }
+    else {
+        const lastYearBirtDate = new Date(`${now.getFullYear() - 1}-${birtdate.getMonth() + 1}-${birtdate.getDate()}`);
+
+        return {
+            years: now.getFullYear() - birtdate.getFullYear() - 1,
+            days: Math.floor((now.getTime() - lastYearBirtDate.getTime()) / (1000 * 60 * 60 * 24))
+        }
+    }
+}
